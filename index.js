@@ -20,7 +20,7 @@ dotenv.config();
 // Setting up port number
 const PORT = process.env.PORT || 4000;
 const corsOptions = {
-	origin: 'https://localhost:3000', // Your frontend's origin
+	origin: 'http://localhost:3000', // Your frontend's origin
 	methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 	allowedHeaders: ['Content-Type', 'Authorization']
   };
