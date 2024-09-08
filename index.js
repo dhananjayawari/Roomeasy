@@ -11,12 +11,21 @@ const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
 const bodyParser = require('body-parser');
+const cors = require('cors');
+
 
 // Loading environment variables from .env file
 dotenv.config();
 
 // Setting up port number
 const PORT = process.env.PORT || 4000;
+const corsOptions = {
+	origin: 'https://roomeasy-3lbj.onrender.com', // Your frontend's origin
+	methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+	allowedHeaders: ['Content-Type', 'Authorization']
+  };
+  app.use(cors(corsOptions));
+
 
 
 
