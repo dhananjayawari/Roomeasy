@@ -7,7 +7,6 @@ const listingRoute = require("./routes/listing");
 const contactUsRoute = require("./routes/Contact");
 const database = require("./config/database");
 const cookieParser = require("cookie-parser");
-const cors = require("cors");
 const { cloudinaryConnect } = require("./config/cloudinary");
 const fileUpload = require("express-fileupload");
 const dotenv = require("dotenv");
@@ -30,12 +29,7 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 // Middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-	cors({
-		origin: "*",
-		credentials: true,
-	})
-);
+
 app.use(
 	fileUpload({
 		useTempFiles: true,
