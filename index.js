@@ -20,7 +20,7 @@ dotenv.config();
 // Setting up port number
 const PORT = process.env.PORT || 4000;
 const corsOptions = {
-	origin: 'http://localhost:3000', // Your frontend's origin
+	origin: 'https://66dee32819010dd6b7662d79--strong-strudel-ca76f5.netlify.app', // Your frontend's origin
 	methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
 	allowedHeaders: ['Content-Type', 'Authorization']
   };
